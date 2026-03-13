@@ -48,13 +48,13 @@ class Renderer:
 
         pygame.init()
         self.screen = pygame.display.set_mode((total_w, total_h))
-        pygame.display.set_caption("Maze AI – Visualizador de algoritmos")
+        pygame.display.set_caption("Proyecto IA – Visualizador de algoritmos")
         self.clock = pygame.time.Clock()
 
         # Fuentes
-        self.font_small  = pygame.font.SysFont("monospace", 14)
+        self.font_small = pygame.font.SysFont("monospace", 14)
         self.font_medium = pygame.font.SysFont("monospace", 17, bold=True)
-        self.font_title  = pygame.font.SysFont("monospace", 20, bold=True)
+        self.font_title = pygame.font.SysFont("monospace", 20, bold=True)
 
     # ------------------------------------------------------------------
     # Bucle principal
@@ -118,25 +118,25 @@ class Renderer:
     def _draw_walls(self) -> None:
         """Dibuja las paredes activas de cada celda."""
         cs = self.cell_size
-        w  = self.WALL_WIDTH
+        w = self.WALL_WIDTH
 
         for row in self.maze.grid:
             for cell in row:
                 x = cell.col * cs
                 y = cell.row * cs
 
-                if cell.has_wall('N'):
-                    pygame.draw.line(self.screen, colors.WALL,
-                                     (x, y), (x + cs, y), w)
-                if cell.has_wall('S'):
-                    pygame.draw.line(self.screen, colors.WALL,
-                                     (x, y + cs), (x + cs, y + cs), w)
-                if cell.has_wall('W'):
-                    pygame.draw.line(self.screen, colors.WALL,
-                                     (x, y), (x, y + cs), w)
-                if cell.has_wall('E'):
-                    pygame.draw.line(self.screen, colors.WALL,
-                                     (x + cs, y), (x + cs, y + cs), w)
+                if cell.has_wall("N"):
+                    pygame.draw.line(self.screen, colors.WALL, (x, y), (x + cs, y), w)
+                if cell.has_wall("S"):
+                    pygame.draw.line(
+                        self.screen, colors.WALL, (x, y + cs), (x + cs, y + cs), w
+                    )
+                if cell.has_wall("W"):
+                    pygame.draw.line(self.screen, colors.WALL, (x, y), (x, y + cs), w)
+                if cell.has_wall("E"):
+                    pygame.draw.line(
+                        self.screen, colors.WALL, (x + cs, y), (x + cs, y + cs), w
+                    )
 
     def _draw_special_cells(self, agent_pos: Optional[Tuple[int, int]]) -> None:
         """Dibuja inicio, meta y posición actual del agente."""
@@ -145,9 +145,14 @@ class Renderer:
 
         def filled_rect(row, col, color):
             pygame.draw.rect(
-                self.screen, color,
-                pygame.Rect(col * cs + margin, row * cs + margin,
-                            cs - 2 * margin, cs - 2 * margin),
+                self.screen,
+                color,
+                pygame.Rect(
+                    col * cs + margin,
+                    row * cs + margin,
+                    cs - 2 * margin,
+                    cs - 2 * margin,
+                ),
                 border_radius=4,
             )
 
@@ -178,8 +183,11 @@ class Renderer:
 
         # Separador
         pygame.draw.line(
-            self.screen, colors.WALL,
-            (maze_pixel_w, 0), (maze_pixel_w, self.screen.get_height()), 2
+            self.screen,
+            colors.WALL,
+            (maze_pixel_w, 0),
+            (maze_pixel_w, self.screen.get_height()),
+            2,
         )
 
         x = maze_pixel_w + 16
@@ -192,7 +200,7 @@ class Renderer:
             y += surf.get_height() + 6
 
         # Título del panel
-        draw_text("MAZE  AI", self.font_title, colors.HIGHLIGHT)
+        draw_text("Proyecto IA", self.font_title, colors.HIGHLIGHT)
         draw_text("─" * 22, self.font_small, colors.WALL)
 
         # Controles
@@ -204,10 +212,14 @@ class Renderer:
 
         # Información del laberinto
         draw_text("Laberinto:", self.font_medium, colors.TEXT_COLOR)
-        draw_text(f"Tamaño : {self.maze.rows} × {self.maze.cols}",
-                  self.font_small, colors.TEXT_COLOR, 8)
+        draw_text(
+            f"Tamaño : {self.maze.rows} × {self.maze.cols}",
+            self.font_small,
+            colors.TEXT_COLOR,
+            8,
+        )
         draw_text(f"Inicio : {self.maze.start}", self.font_small, colors.TEXT_COLOR, 8)
-        draw_text(f"Meta   : {self.maze.goal}",  self.font_small, colors.TEXT_COLOR, 8)
+        draw_text(f"Meta   : {self.maze.goal}", self.font_small, colors.TEXT_COLOR, 8)
         y += 10
 
         if stats:
@@ -224,11 +236,11 @@ class Renderer:
         draw_text("Leyenda:", self.font_medium, colors.TEXT_COLOR)
 
         legend = [
-            (colors.START,   "Inicio"),
-            (colors.GOAL,    "Meta"),
-            (colors.AGENT,   "Agente"),
+            (colors.START, "Inicio"),
+            (colors.GOAL, "Meta"),
+            (colors.AGENT, "Agente"),
             (colors.VISITED, "Visitado"),
-            (colors.PATH,    "Camino"),
+            (colors.PATH, "Camino"),
         ]
         for color, label in legend:
             square_rect = pygame.Rect(x, y + 2, 14, 14)

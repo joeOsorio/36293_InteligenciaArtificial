@@ -60,7 +60,7 @@ def run_agent(
     os.environ["SDL_VIDEO_WINDOW_POS"] = f"{x},{y}"
 
     renderer = Renderer(maze, cell_size=CELL_SIZE, fps=FPS)
-    pygame.display.set_caption(f"Maze AI – {agent_name.upper()}")
+    pygame.display.set_caption(f"Proyecto Final – {agent_name.upper()}")
 
     stats = Stats(
         agent_name=agent_name.upper(), generator_name=GENERATOR_NAME.capitalize()
