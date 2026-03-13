@@ -1,0 +1,120 @@
+# --- Archivos binarios y objetos generados por compilación ---
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+*.dll
+*.dylib
+*.ko
+*.elf
+*.lib
+*.la
+*.lo
+*.i*86
+*.x86_64
+*.hex
+*.app
+
+# --- Archivos de imágenes de disco ---
+*.img
+
+# --- Carpetas de salida / compilación ---
+Presentacion/
+output/
+*/output/
+bin/
+build/
+dist/
+.tmp_versions/
+Module.symvers
+resultados_pruebas/
+
+# --- Archivos de depuración ---
+*.stackdump
+*.core
+*.pdb
+*.dSYM/
+*.su
+*.idb
+*.dwo
+
+# --- Archivos intermedios / temporales ---
+*.tmp
+*.temp
+*.log
+*.bak
+*.old
+Mkfile.old
+
+# --- Archivos generados por el sistema ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# --- Configuraciones locales de VSCode (opcional) ---
+# .vscode/
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+
+# --- Kernel Module Compile Results ---
+*.mod*
+*.cmd
+dkms.conf
+
+
+# binarios grandes
+*.exe
+*.zip
+*.rar
+*.7z
+
+# resultados de pruebas
+Proyecto/resultados_pruebas/
+
+# python
+__pycache__/
+*.pyc
+
+# datasets / modelos
+datasets/
+models/
+outputs/
+logs/
+.env/
+
+venv/
+
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Entornos virtuales
+venv/
+env/
+.env
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# macOS
+.DS_Store
+
+# Logs y temporales
+*.log
+*.tmp

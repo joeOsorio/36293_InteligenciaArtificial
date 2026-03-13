@@ -1,0 +1,24 @@
+Práctica No. 1 Laboratorio
+Mauricio Alonso Sanchez Herrera
+•
+Laboratorio
+•
+100 puntos
+Fecha de entrega: 13:59
+Competencia:
+Analizar los conceptos básicos de la inteligencia artificial, mediante la investigación del estado del arte, para sintetizar sus objetivos, alcances, aplicaciones e implicaciones éticas, con actitud crítica y reflexiva.
+ 
+Descripción:
+Revisar la literatura recomendada e investigar del contexto actual de la inteligencia artificial.
+Identificar y analizar los conceptos básicos de la inteligencia artificial y realizar una síntesis de sus objetivos, alcances, aplicaciones e implicaciones éticas.
+ 
+Procedimiento:
+De manera individual.
+1.    Elaborar un reporte técnico que contenga un análisis en palabras propias de los siguientes puntos:
+        a.    Estado actual de la Inteligencia Artificial respecto la evolución de esta a través de su historia.
+        b.    Discusión en palabras propias de los objetivos ideales de la Inteligencia Artificial y contrastar contra la realidad.
+        c.    Discusión en palabras propias de las implicaciones éticas alrededor de la existencia de la Inteligencia Artificial.
+        d.    Describir brevemente tres aplicaciones de la Inteligencia Artificial en los siguientes contextos:
+                i.      Hogar
+                ii.     Industria
+                iii.    Contexto de elección libre
