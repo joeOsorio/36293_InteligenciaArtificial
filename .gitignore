@@ -127,6 +127,7 @@ mlruns/
 
 # Entornos virtuales
 venv/
+venv_BFS/
 env/
 .env
 .venv
